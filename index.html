@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universe Love</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/qvjz8QFW/Logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div id="entry-modal">
+      <img
+        id="entry-gif"
+        src="https://i.pinimg.com/originals/b4/ae/57/b4ae57277f60b88d4d059057e3941f92.gif"
+        alt=""
+      />
+      <button id="entry-button">Khám phá Vũ trụ</button>
+      <div id="entry-loading" style="display: none">
+        <div id="entry-spinner"></div>
+        <p>Đang tải...</p>
+      </div>
+    </div>
+
+    <audio id="background-music" src="./style/nhac.mp3" loop></audio>
+
+    <div id="love-card-overlay" style="display: none">
+      <div id="love-card">
+        <button id="love-card-close" aria-label="Đóng">&times;</button>
+        <div id="love-card-image"></div>
+        <p id="love-card-text"></p>
+      </div>
+    </div>
+
+    <canvas
+      id="galaxy-canvas"
+      data-engine="three.js r160"
+      width="1117"
+      height="911"
+      style="width: 1117px; height: 911px; touch-action: none"
+    ></canvas>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module" src="./style/script.js"></script>
+  </body>
+</html>
